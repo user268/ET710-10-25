@@ -1,4 +1,6 @@
+<!--www.indeed.com *reminder*-->
 <!doctype html>
+
 <html ng-app="spaApp" class="no-js" lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -68,6 +70,14 @@ https://stackoverflow.com/questions/14698589/fontawesome-not-available-as-a-font
       </div>
     </div>
     <!--*end nav-->
+
+    <label>Name:</label>
+    <input type="text" ng-model="yourName" placeholder="Enter a name here">
+    <hr>
+    <h1>Hello {{yourName}}!</h1>
+  </div>
+</body>
+</html>
 
     <!-- *Begin Content -->
     <div ng-view></div>
