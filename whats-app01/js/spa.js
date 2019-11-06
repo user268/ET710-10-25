@@ -1,50 +1,93 @@
 var app = angular.module('spaApp',['ngRoute']);
 
+
+
 app.config(function($routeProvider) {
 $routeProvider.when('/',
 {
 controller:'CustomersController',
 templateUrl: 'app/views/home.html'
 })
+
+
+
 .when('/contact',
 {
 controller: 'BookController',
 templateUrl: 'app/views/contact.html'
 })
+
+
+
+.when('/About',
+{
+controller: 'AboutController',
+templateUrl: 'app/views/services.html'
+})
+
+
+
 .when('/services',
 {
 controller: 'MenuController',
 templateUrl: 'app/views/services.html'
 })
+
+
+
 .when('/news',
 {
-controller: 'FlightStatusController',
+controller: 'NewsController',
 templateUrl: 'app/views/news.html'
 })
+
+
+
 .when('/works',
 {
-controller: 'ETFinalsController',
+controller: 'WorksController',
 templateUrl: 'app/views/works.html'
 })
 });
+
+
+
 app.controller('BookController', function($scope){
 $scope.customerID = 5;
 });
+
+
+
 app.controller('MenuController', function($scope){
 $scope.customerID = 5;
 });
+
+
+
 app.controller('StoryController', function($scope){
 $scope.customerID = 5;
 });
+
+
+
 app.controller('FlightStatusController', function($scope){
 $scope.customerID = 5;
 });
+
+
+
 app.controller('ETFinalsController', function($scope){
 $scope.customerID = 5;
 });
+
+
+
 app.controller('AdamController', function($scope){
 $scope.customerID = 5;
 });
+
+
+
 app.controller('CustomersController', function($scope) {
 $scope.customers = [
 {"id": 1, "name":"Ted", "total": 5.996},
